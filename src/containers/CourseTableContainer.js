@@ -2,6 +2,7 @@ import React from "react";
 import CourseService from "../services/CourseService";
 import {CourseRowComponent} from "../components/CourseRowComponent";
 import {createCourse, deleteCourse} from "../services/CourseService";
+import {Link} from "react-router-dom";
 
 export class CourseTableContainer extends React.Component {
 
@@ -86,9 +87,14 @@ export class CourseTableContainer extends React.Component {
                     <th className="wbdv-header wbdv-owner">Owned By</th>
                     <th className="wbdv-header wbdv-last-modified">Last Modified</th>
                     <th>
-                            <i className="fa fa-sort float-right"/>
+                        <i className="fa fa-sort float-right"/>
+                        <Link to="/course/grid">
                             <i className="fa fa-th-large float-right"/>
+                        </Link>
+                        <Link to="/course/table">
                             <i className="fa fa-list float-right"/>
+                        </Link>
+
                     </th>
                 </tr>
                 </thead>

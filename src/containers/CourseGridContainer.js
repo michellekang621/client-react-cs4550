@@ -1,8 +1,9 @@
 import React from "react";
-import {CourseCardComponent} from "../components/CourseCardComponent";
 import CourseService from "../services/CourseService";
+import {CourseCardComponent} from "../components/CourseCardComponent";
 import {createCourse, deleteCourse} from "../services/CourseService";
 import {CourseRowComponent} from "../components/CourseRowComponent";
+import {Link} from "react-router-dom";
 
 export class CourseGridContainer extends React.Component {
     state = {
@@ -79,20 +80,24 @@ export class CourseGridContainer extends React.Component {
                         <i className="fa fa-plus"/>
                     </h1>
                 </form>
-                <div className="table">
-                    <thead>
+                <table className="table">
+                    <tbody>
                     <tr>
                         <th className="wbdv-header wbdv-title">Title</th>
                         <th className="wbdv-header wbdv-owner">Owned By</th>
                         <th className="wbdv-header wbdv-last-modified">Last Modified</th>
                         <th>
                             <i className="fa fa-sort float-right"/>
-                            <i className="fa fa-th-large float-right"/>
-                            <i className="fa fa-list float-right"/>
+                            <Link to="/course/grid">
+                                <i className="fa fa-th-large float-right"/>
+                            </Link>
+                            <Link to="/course/table">
+                                <i className="fa fa-list float-right"/>
+                            </Link>
                         </th>
                     </tr>
-                    </thead>
-                    </div>
+                    </tbody>
+                    </table>
             <div className="card-deck">
                 { this.state.courses.map((course) =>
                     <CourseCardComponent

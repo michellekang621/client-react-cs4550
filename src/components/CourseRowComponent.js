@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css"
 import {Link} from "react-router-dom";
-import CourseService, {updateCourse} from "../services/CourseService";
+import CourseService from "../services/CourseService";
 
 export class CourseRowComponent extends React.Component {
 
@@ -22,7 +22,7 @@ export class CourseRowComponent extends React.Component {
 
     updateCourse = () => {
         this.setState({editing:false})
-        updateCourse(this.state.course._id, this.state.course)
+        CourseService.updateCourse(this.state.course._id, this.state.course)
     }
 
 

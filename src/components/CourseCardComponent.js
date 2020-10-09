@@ -7,7 +7,7 @@ import CourseService, {updateCourse} from "../services/CourseService";
 export class CourseCardComponent extends React.Component {
     state = {
         editing: false,
-        courseTitle: "Some Course",
+        courseTitle: "",
         course: this.props.course
     }
 
@@ -23,7 +23,7 @@ export class CourseCardComponent extends React.Component {
 
     updateCourse = () => {
         this.setState({editing:false})
-        updateCourse(this.state.course._id, this.state.course)
+        CourseService.updateCourse(this.state.course._id, this.state.course)
     }
 
     render() {
@@ -47,8 +47,7 @@ export class CourseCardComponent extends React.Component {
                     <p className="card-text">{this.props.course.owner}</p>
                     <p className="card-text">{this.props.course.lastUpdated}</p>
 
-                    <Link className="btn btn-primary"
-                          to={`/course/edit/${this.props.course.id}`}>More...</Link>
+                    <Link to={`/edit/${this.state.course._id}`}>More...</Link>
                     <i onClick={() => this.props.deleteCourse(this.props.course)}
                        className="fa fa-trash float-right"/>
                     {
