@@ -1,19 +1,40 @@
 import React from "react";
-import '../node_modules/bootstrap/dist/css/bootstrap.css';
-import "font-awesome/css/font-awesome.css"
+import CourseService from "../services/CourseService";
 import {CourseRowComponent} from "../components/CourseRowComponent";
 import {createCourse, deleteCourse} from "../services/CourseService";
 
 export class CourseTableContainer extends React.Component {
 
-    createCourse = () => {
-        const newCourse = {
-            title: "New Course",
+    state = {
+        courses: this.props.courses,
+        course: {
+            title: "",
             owner: "me",
             lastUpdated: "today"
         }
+    }
 
-        createCourse(newCourse)
+    componentDidMount() {
+        CourseService.findAllCourses()
+            .then(courses => this.setState({
+                courses: courses
+            }))
+    }
+
+    createTitle = (event) => {
+        const courseTitle = event.target.value
+        const newCourse = {
+            title: courseTitle,
+            owner: "me",
+            lastUpdated: "today"
+        }
+        this.setState({
+            course: newCourse
+        })
+    }
+
+    createCourse = () => {
+        createCourse(this.state.course)
             .then(actualCourse => this.setState(function (prevState) {
                 return {
                     courses: [
@@ -22,6 +43,7 @@ export class CourseTableContainer extends React.Component {
                 }
             }))
             .catch(error => {})
+        console.log(this.props.courses)
     }
 
     deleteCourse = (course) => {
@@ -39,55 +61,43 @@ export class CourseTableContainer extends React.Component {
             <form>
                 <h1 className="wbdv-sticky-h1 form-row">
                     <div className="col">
-                        <a href="#">
-                            <i className="fas fa-bars wbdv-color-white wbdv-field wbdv-hamburger"
-                               style="margin-left:30px; margin-top:20px; font-size:30px"></i>
-                        </a>
+                        <i className="fa fa-bars"/>
                     </div>
                     <div className="col wbdv-label wbdv-course-manager">
-                        <label htmlFor="courseManager"
-                               style="position:left; font-size:20px">Course Manager</label>
+                        <label htmlFor="courseManager">Course Manager</label>
                     </div>
                     <div className="form-group col-8 wbdv-field wbdv-new-course">
 
-                        <input id="courseManager" placeholder="New Course Title" type="text"
-                               className="form-control wbdv-nudge-15px-down"/>
+                        <input id="courseManager"
+                               placeholder="New Course Title"
+                               type="text"
+                               className="form-control wbdv-nudge-15px-down"
+                               onChange={this.createTitle}/>
 
                     </div>
-                    <a href="#">
-                        <i className="fas fa-plus col wbdv-color-white wbdv-button wbdv-add-course">
-                            style="position:relative; margin-right:30px; font-size:30px; top: 7px"></i>
-                    </a>
-                    <a href="#">
-                        <i className="wbdv-stuck-bottom-right wbdv-color-white fas fa-plus"
-                           style="font-size:30px"></i>
-                    </a>
+                        <i className="fa fa-plus" onClick={this.createCourse}/>
+                        <i className="fa fa-plus"/>
                 </h1>
             </form>
             <table className="table">
                 <thead>
                 <tr>
-                    <th className="wbdv-header wbdv-title" style="width:50%">Title</th>
+                    <th className="wbdv-header wbdv-title">Title</th>
                     <th className="wbdv-header wbdv-owner">Owned By</th>
                     <th className="wbdv-header wbdv-last-modified">Last Modified</th>
                     <th>
-                        <a href="#" className="wbdv-header wbdv-sort">
-                            <i className="fas fa-sort float-right"></i>
-                        </a>
-                        <a href="#" className="wbdv-button wbdv-grid-layout">
-                            <i className="fas fa-th-large float-right" style="margin-right:65px"></i>
-                        </a>
-                        <a href="#" className="wbdv-button wbdv-list-layout">
-                            <i className="fas fa-list float-right" style="margin-right:15px"></i>
-                        </a>
+                            <i className="fa fa-sort float-right"/>
+                            <i className="fa fa-th-large float-right"/>
+                            <i className="fa fa-list float-right"/>
                     </th>
                 </tr>
                 </thead>
                 <tbody>
-                { this.props.courses.map((course, key) =>
+                { this.state.courses.map((course) =>
                     <CourseRowComponent
                         course={course}
-                        key={key}/>
+                        key={course._id}
+                        deleteCourse={this.deleteCourse}/>
                 )}
                 </tbody>
             </table>

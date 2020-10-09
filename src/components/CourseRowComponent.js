@@ -1,6 +1,7 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.css"
 import {Link} from "react-router-dom";
-import {updateCourse} from "../services/CourseService";
+import CourseService, {updateCourse} from "../services/CourseService";
 
 export class CourseRowComponent extends React.Component {
 
@@ -47,17 +48,16 @@ export class CourseRowComponent extends React.Component {
                 <td>{this.props.course.lastUpdated}</td>
                 <td>
                     <i onClick={() => this.props.deleteCourse(this.props.course)}
-                       className="fas fa-trash-alt float-right"
-                       style="margin-right:15px"></i>
+                       className="fa fa-trash float-right"/>
                     {
                         !this.state.editing &&
-                            <i onClick={() => this.setState({editing:true})}
-                               className="far fa-edit float-right"></i>
+                            <i onClick={() => this.setState({editing: true})}
+                               className="fa fa-edit float-right"/>
                     }
                     {
                         this.state.editing &&
                         <i onClick={this.updateCourse}
-                        className="far fa-check-square"></i>
+                           className="fa fa-check-square"/>
                     }
                 </td>
             </tr>

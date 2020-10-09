@@ -20,27 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5e1b3a0-5469-41ab-9b5d-3586bd352743" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/cs4550-f20-client-react-michellekang.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CourseCardComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CourseRowComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ModuleListItemComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/CourseEditorContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/CourseGridContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/CourseManagerContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/CourseTableContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/LessonTabsContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/ModuleListContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/TopicPillsContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/CourseService.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/cs4550-f20-sever-java-michellekang.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CS3500/HW01.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CS3500/code/hw01.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CourseCardComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CourseCardComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CourseRowComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CourseRowComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/CourseGridContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/CourseGridContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/CourseManagerContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/CourseManagerContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/CourseTableContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/CourseTableContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/CourseService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/CourseService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/course-editor/course-editor.template.client.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/course-editor/course-editor.template.client.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/course-list/course-list.template.client.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/course-list/course-list.template.client.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/css/styles.css" afterDir="false" />
@@ -59,7 +50,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ic1xYr0Y9Z3TyXVTP6Y1uTFcvc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -98,7 +89,9 @@
       <option name="presentableId" value="Default" />
       <updated>1602192313529</updated>
       <workItem from="1602192315467" duration="5365000" />
-      <workItem from="1602206394624" duration="1993000" />
+      <workItem from="1602206394624" duration="4182000" />
+      <workItem from="1602211150174" duration="612000" />
+      <workItem from="1602265944929" duration="5783000" />
     </task>
     <servers />
   </component>
