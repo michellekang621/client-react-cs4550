@@ -20,26 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5e1b3a0-5469-41ab-9b5d-3586bd352743" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/styling/CourseCard.style.client.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styling/CourseGrid.style.client.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styling/CourseManager.style.client.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styling/CourseRow.style.client.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styling/CourseTable.style.client.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styling/styles.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/cs4550-f20-sever-java-michellekang.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CS3500/HW01.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CS3500/code/hw01.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CourseCardComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CourseCardComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CourseRowComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CourseRowComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ModuleListItemComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModuleListItemComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/CourseEditorContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/CourseEditorContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/CourseGridContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/CourseGridContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/CourseManagerContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/CourseManagerContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/CourseTableContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/CourseTableContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/LessonTabsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/LessonTabsContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/ModuleListContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ModuleListContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/CourseService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/CourseService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/course-editor/course-editor.template.client.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/course-editor/course-editor.template.client.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/course-list/course-list.template.client.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/course-list/course-list.template.client.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/css/styles.css" afterDir="false" />
@@ -105,7 +92,7 @@
       <workItem from="1602351930801" duration="724000" />
       <workItem from="1602356490251" duration="46000" />
       <workItem from="1602462025200" duration="8231000" />
-      <workItem from="1602550975429" duration="290000" />
+      <workItem from="1602550975429" duration="5936000" />
     </task>
     <servers />
   </component>

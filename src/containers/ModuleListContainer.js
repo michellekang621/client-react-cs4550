@@ -5,7 +5,20 @@ import ModuleListItemComponent from "../components/ModuleListItemComponent";
 export class ModuleListContainer extends React.Component{
 
     state = {
-        modules: []
+        modules: [
+            {
+                title: "Module 1",
+                lessons: []
+            },
+            {
+                title: "Module 2",
+                lessons: []
+            },
+            {
+                title: "Module 3",
+                lessons: []
+            }
+        ]
     }
 
     render() {
@@ -18,7 +31,8 @@ export class ModuleListContainer extends React.Component{
                         module={module}
                         selectedModule={selectedModule}
                         selectModule={selectModule}
-                        key={key}/>)}
+                        key={key}/>)
+                }
             </ul>
                 <i className="fa fa-plus-square float-right"/>
             </div>

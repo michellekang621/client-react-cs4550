@@ -12,9 +12,41 @@ export class CourseManagerContainer extends React.Component {
     state = {
         courses: [],
         course: {
-            title: "",
+            title: "hello",
             owner: "me",
-            lastUpdated: "today"
+            lastUpdated: "today",
+            modules: [
+                {
+                    title: "Module 1",
+                    lessons: [
+                        {
+                            title: "Lesson 1"
+                        },
+                        {
+                            title: "Lesson 2"
+                        }
+                    ]
+                },
+                {
+                    title: "Module 2",
+                    lessons: [
+                        {
+                            title: "Lesson 1"
+                        },
+                        {
+                            title: "Lesson 2"
+                        }
+                    ]
+                },
+                {
+                    title: "Module 3",
+                    lessons: [
+                        {
+                            title: "Lesson 1"
+                        }
+                    ]
+                }
+            ]
         }
     }
 
@@ -60,7 +92,11 @@ export class CourseManagerContainer extends React.Component {
                     <Route path="/course/grid"
                            render={() => <CourseGridContainer courses={this.state.courses}/>}/>
                     <Route path="/edit/:id"
-                           render={() => <CourseEditorContainer/>}/>
+                           render={() => <CourseEditorContainer
+                               courses={this.state.courses}
+                               course={this.state.course}
+                               modules={this.state.course.modules}
+                           />}/>
                     <Link to="/course/table" className="bottom-right">Table</Link>
                     <Link to="/course/grid" className="bottom-right">Grid</Link>
                 </div>
@@ -68,4 +104,3 @@ export class CourseManagerContainer extends React.Component {
         )
     }
 }
-
