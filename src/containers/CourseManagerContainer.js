@@ -81,7 +81,6 @@ export class CourseManagerContainer extends React.Component {
             )
     }
 
-
     render() {
         return(
             <Router>

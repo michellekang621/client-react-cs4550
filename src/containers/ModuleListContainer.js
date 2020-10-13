@@ -23,9 +23,8 @@ export class ModuleListContainer extends React.Component{
 
     render() {
         return(
-            <div className="col-4 element-color">
+            <div className="element-color">
             <ul className="list-group">
-                <p>HELLO</p>
                 {   this.state.modules.map((module, selectModule, selectedModule, key) =>
                     <ModuleListItemComponent
                         module={module}

@@ -6,6 +6,10 @@ body {
     color: #8d929e;
 }
 
+.pad-element {
+    padding: 3%;
+}
+
 a:link {
     text-decoration: none;
     color:lightgrey;

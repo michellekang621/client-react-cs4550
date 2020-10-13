@@ -1,20 +1,25 @@
 import React from "react";
 
-export const LessonTabs = ({lessons, selectedLesson, selectLesson}) =>
-    <ul className="nav nav-tabs">
-        <p>HELLO</p>
+export class LessonTabsContainer extends React.Component {
 
-        {   lessons.map((lesson, key) =>
-            <li className="nav-item"
-                onClick={() => selectLesson(lesson)}
-                key={key}>
-                <a className={lesson===selectedLesson? "nav-link active":"nav-link"}>
-                    {lesson.title}
-                </a>
-            </li>
-        )}
-    </ul>
+    state = {
 
-export default {
-    LessonTabs
+    }
+
+    render() {
+        return (
+            <ul className="nav nav-tabs">
+                {this.props.lessons.map((lesson, key) =>
+                    <li className="nav-item"
+                        onClick={() => this.props.selectLesson(lesson)}
+                        key={key}>
+                        <a className={lesson === this.props.selectedLesson ? "nav-link active" : "nav-link"}>
+                            {lesson.title}
+                        </a>
+                    </li>
+                )}
+            </ul>
+        )
+    }
+
 }
