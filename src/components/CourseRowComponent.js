@@ -1,7 +1,9 @@
 import React from "react";
+import "../styling/CourseRow.style.client.css";
 import "bootstrap/dist/css/bootstrap.css"
-import {Link} from "react-router-dom";
+import {BrowserRouter as Router, Link, Route} from "react-router-dom";
 import CourseService from "../services/CourseService";
+import {ModuleListContainer} from "../containers/ModuleListContainer";
 
 export class CourseRowComponent extends React.Component {
 
@@ -39,20 +41,22 @@ export class CourseRowComponent extends React.Component {
                     }
                     {
                         this.state.editing === false &&
-                        <Link to={`/edit/${this.state.course._id}`}>
-                            {this.state.course.title}
-                        </Link>
+                        <div>
+                            <Link to={`/edit/${this.state.course._id}`}>
+                                {this.state.course.title}
+                            </Link>
+                        </div>
                     }
                 </td>
                 <td>{this.props.course.owner}</td>
                 <td>{this.props.course.lastUpdated}</td>
                 <td>
                     <i onClick={() => this.props.deleteCourse(this.props.course)}
-                       className="fa fa-trash float-right"/>
+                       className="fa fa-trash float-right pad-element"/>
                     {
                         !this.state.editing &&
                             <i onClick={() => this.setState({editing: true})}
-                               className="fa fa-edit float-right"/>
+                               className="fa fa-edit float-right pad-element"/>
                     }
                     {
                         this.state.editing &&

@@ -1,7 +1,7 @@
 import React from "react";
 import {findCourseById} from "../services/CourseService";
 import {ModuleListContainer} from "./ModuleListContainer";
-import {LessonTabsContainer} from "./LessonTabsContainer";
+import LessonTabsContainer from "./LessonTabsContainer";
 import {TopicPillsContainer} from "./TopicPillsContainer";
 
 export class CourseEditorContainer extends React.Component{
@@ -29,8 +29,6 @@ export class CourseEditorContainer extends React.Component{
             selectedLesson:
                 this.props.course.modules[0].lessons[0]
         }}
-
-
 
     selectModule = (module) =>
         this.setState({selectedModule: module,

@@ -1,7 +1,9 @@
 import React from "react";
 
-const LessonTabs = ({lessons, selectedLesson, selectLesson}) =>
+export const LessonTabs = ({lessons, selectedLesson, selectLesson}) =>
     <ul className="nav nav-tabs">
+        <p>HELLO</p>
+
         {   lessons.map((lesson, key) =>
             <li className="nav-item"
                 onClick={() => selectLesson(lesson)}
@@ -12,3 +14,7 @@ const LessonTabs = ({lessons, selectedLesson, selectLesson}) =>
             </li>
         )}
     </ul>
+
+export default {
+    LessonTabs
+}

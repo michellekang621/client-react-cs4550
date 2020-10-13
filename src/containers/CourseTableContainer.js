@@ -1,4 +1,5 @@
 import React from "react";
+import "../styling/CourseTable.style.client.css";
 import CourseService from "../services/CourseService";
 import {CourseRowComponent} from "../components/CourseRowComponent";
 import {createCourse, deleteCourse} from "../services/CourseService";
@@ -58,41 +59,42 @@ export class CourseTableContainer extends React.Component {
 
     render() {
         return(
-            <div className="container">
+            <div className="container element-color">
             <form>
                 <h1 className="wbdv-sticky-h1 form-row">
-                    <div className="col">
+                    <div className="col-md-auto">
                         <i className="fa fa-bars"/>
                     </div>
-                    <div className="col wbdv-label wbdv-course-manager">
+                    <div className="col-md-auto float-left pad-top" style={{fontSize:25}}>
                         <label htmlFor="courseManager">Course Manager</label>
                     </div>
-                    <div className="form-group col-8 wbdv-field wbdv-new-course">
+                    <div className="col form-group pad-top">
 
                         <input id="courseManager"
                                placeholder="New Course Title"
                                type="text"
-                               className="form-control wbdv-nudge-15px-down"
+                               className="form-control"
                                onChange={this.createTitle}/>
 
                     </div>
+                    <div className="col-md-auto float-right pad-top">
                         <i className="fa fa-plus" onClick={this.createCourse}/>
-                        <i className="fa fa-plus"/>
+                    </div>
                 </h1>
             </form>
-            <table className="table">
+            <table className="table element-color">
                 <thead>
                 <tr>
                     <th className="wbdv-header wbdv-title">Title</th>
                     <th className="wbdv-header wbdv-owner">Owned By</th>
                     <th className="wbdv-header wbdv-last-modified">Last Modified</th>
                     <th>
-                        <i className="fa fa-sort float-right"/>
+                        <i className="fa fa-sort float-right pad-element"/>
                         <Link to="/course/grid">
-                            <i className="fa fa-th-large float-right"/>
+                            <i className="fa fa-th-large float-right pad-element"/>
                         </Link>
                         <Link to="/course/table">
-                            <i className="fa fa-list float-right"/>
+                            <i className="fa fa-list float-right pad-element"/>
                         </Link>
 
                     </th>

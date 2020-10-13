@@ -1,0 +1,6 @@
+.bottom-right {
+    position: relative;
+    float: right;
+    float: bottom;
+    padding: 10px;
+}

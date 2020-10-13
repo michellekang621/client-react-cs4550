@@ -24,7 +24,7 @@ export const findCourseById = (id) => {
 export const updateCourse = (id, course) => {
     return fetch(`${url}/${id}`, {
         method: "PUT",
-        body: JSON.stringify(),
+        body: JSON.stringify(course),
         headers: {
             'content-type': 'application/json'
         }
@@ -40,5 +40,5 @@ export const deleteCourse = (id) => {
 }
 
 export default {
-    findAllCourses, deleteCourse, createCourse, findCourseById
+    findAllCourses, deleteCourse, createCourse, findCourseById, updateCourse
 }

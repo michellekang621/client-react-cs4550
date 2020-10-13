@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css"
 import {Link} from "react-router-dom";
-import CourseService, {updateCourse} from "../services/CourseService";
+import CourseService from "../services/CourseService";
 
 
 export class CourseCardComponent extends React.Component {
@@ -28,7 +28,7 @@ export class CourseCardComponent extends React.Component {
 
     render() {
         return(
-            <div className="card" styles={{width: '18rem'}}>
+            <div className="card bg-dark" styles={{width: '18rem'}}>
                 <img className="card-img-top"
                      src="https://picsum.photos/300/200"/>
                 <div className="card-body">
@@ -49,16 +49,16 @@ export class CourseCardComponent extends React.Component {
 
                     <Link to={`/edit/${this.state.course._id}`}>More...</Link>
                     <i onClick={() => this.props.deleteCourse(this.props.course)}
-                       className="fa fa-trash float-right"/>
+                       className="fa fa-trash float-right pad-element element-color"/>
                     {
                         !this.state.editing &&
                         <i onClick={() => this.setState({editing: true})}
-                           className="fa fa-edit float-right"/>
+                           className="fa fa-edit float-right pad-element element-color"/>
                     }
                     {
                         this.state.editing &&
                         <i onClick={this.updateCourse}
-                           className="fa fa-check-square"/>
+                           className="fa fa-check-square float-right pad-element element-color"/>
                     }
                 </div>
             </div>
