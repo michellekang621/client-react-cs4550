@@ -3,7 +3,6 @@ import "../styling/CourseRow.style.client.css";
 import "bootstrap/dist/css/bootstrap.css"
 import {BrowserRouter as Router, Link, Route} from "react-router-dom";
 import CourseService from "../services/CourseService";
-import {ModuleListContainer} from "../containers/ModuleListContainer";
 
 export class CourseRowComponent extends React.Component {
 

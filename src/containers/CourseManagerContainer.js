@@ -12,41 +12,10 @@ export class CourseManagerContainer extends React.Component {
     state = {
         courses: [],
         course: {
-            title: "hello",
+            title: "",
             owner: "me",
             lastUpdated: "today",
-            modules: [
-                {
-                    title: "Module 1",
-                    lessons: [
-                        {
-                            title: "Lesson 1"
-                        },
-                        {
-                            title: "Lesson 2"
-                        }
-                    ]
-                },
-                {
-                    title: "Module 2",
-                    lessons: [
-                        {
-                            title: "Lesson 1"
-                        },
-                        {
-                            title: "Lesson 2"
-                        }
-                    ]
-                },
-                {
-                    title: "Module 3",
-                    lessons: [
-                        {
-                            title: "Lesson 1"
-                        }
-                    ]
-                }
-            ]
+            modules: []
         }
     }
 
