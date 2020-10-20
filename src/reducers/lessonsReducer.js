@@ -5,43 +5,39 @@ import {
 } from "../actions/lessonsActions";
 
 const initialState = {
-    lessons: [
-        {
-            _id: 123,
-            title: "Lesson 1",
-            editing: false
-        },
-        {
-            _id: 234,
-            title: "Lesson 2",
-            editing: false
-        },
-        {
-            _id: 345,
-            title: "Lesson 3",
-            editing: true
-        }
-    ]
+    lessons: [],
+    lesson: {}
 }
 
 const lessonReducer = (state = initialState, action) => {
     switch (action.type) {
+        case "FIND_LESSON_BY_ID":
+            return {
+                ...state,
+                lesson: action.lesson
+            }
+        case "FIND_LESSONS_FOR_MODULE":
+            return {
+                ...state,
+                lessons: action.lessons,
+                moduleId: action.moduleId
+            }
         case CREATE_LESSON:
             return {
+                ...state,
                 lessons: [
                     ...state.lessons,
-                    {
-                        _id: Date.now() + "",
-                        title: "New Lesson"
-                    }
+                    action.lesson
                 ]
             }
         case DELETE_LESSON:
             return {
+                ...state,
                 lessons: state.lessons.filter(lesson => lesson._id !== action.lesson._id)
             }
         case EDIT_LESSON:
             return {
+                ...state,
                 lessons: state.lessons.map(lesson => lesson._id === action.lesson._id? action.lesson : lesson)
             }
         default:

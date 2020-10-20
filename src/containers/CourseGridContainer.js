@@ -6,12 +6,7 @@ import {Link} from "react-router-dom";
 
 export class CourseGridContainer extends React.Component {
     state = {
-        courses: this.props.courses,
-        course: {
-            title: "",
-            owner: "me",
-            lastUpdated: "today"
-        }
+        courses: []
     }
 
     componentDidMount() {

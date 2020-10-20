@@ -11,8 +11,10 @@ import {Provider} from "react-redux";
 import moduleReducer from "./reducers/modulesReducer";
 import lessonReducer from "./reducers/lessonsReducer";
 import topicReducer from "./reducers/topicsReducer";
+import courseReducer from "./reducers/courseReducer";
 
 const rootReducer = combineReducers({
+    courseReducer: courseReducer,
     moduleReducer: moduleReducer,
     lessonReducer: lessonReducer,
     topicReducer: topicReducer

@@ -1,59 +1,66 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.css"
 import {connect} from "react-redux";
+import {Link} from "react-router-dom";
 import {
     deleteModule,
     updateModule,
-    createModule
-        } from "../actions/moduleActions";
+    createModule,
+    findModulesForCourse,
+    findModule
+} from "../actions/moduleActions";
 
-const ModuleListComponent = ({modules =[], deleteModule, createModule, updateModule}) =>
+const ModuleListComponent = ({course, modules = [], deleteModule, createModule, updateModule}) =>
     <div>
         <h1>Modules</h1>
-        <ul>
+        <ul class="list-group">
             {
                 modules.map(module =>
-                <li>
-                    <button onClick={() => deleteModule(module)}>
-                        Delete
-                    </button>
-                    {
-                        module.editing &&
-                            <span>
-                                <button onClick={() =>
-                                    updateModule({...module, editing:false})}>
-                                    Ok
-                                </button>
+                    <li key={module._id} class="list-group-item">
+
+                    <Link to={`/edit/${course._id}/modules/${module._id}`}>
+                            {
+                                module.editing &&
+                                <span>
+                                <i onClick={() => updateModule({...module, editing: false})}
+                                        className="fa fa-check-square float-right pad-element element-color"/>
+                                <i onClick={() => deleteModule(module)}
+                                   className="fa fa-trash float-right pad-element element-color"/>
                                 <input
                                     onChange={(event) => updateModule({...module, title: event.target.value})}
                                     value={module.title}/>
-                            </span>
-                    }
-                    {
-                        !module.editing &&
-                            <label>
-                                <button onClick={() =>
-                                    updateModule({...module, editing: true})}>
-                                    Edit
-                                </button>
-                                {module.title}
-                            </label>
-                    }
-                </li>)
+                                </span>
+                            }
+                            {
+                                !module.editing &&
+                                <label>
+                                    <i onClick={() => updateModule({...module, editing: true})}
+                                            className="fa fa-edit float-right pad-element element-color"/>
+                                    {module.title}
+                                </label>
+
+                            }
+                    </Link>
+                    </li>
+                )
             }
         </ul>
-        <button onClick={createModule}>
+        <button onClick={() => createModule(course, {title: "New Module"})}>
             Create Module
         </button>
     </div>
 
 const stateToPropertyMapper = (state) => ({
-    modules: state.moduleReducer.modules
+    modules: state.moduleReducer.modules,
+    course: state.courseReducer.course
 })
 
 const propertyToDispatchMapper = (dispatch) => ({
     deleteModule: (module) => deleteModule(dispatch, module),
-    createModule: () => createModule(dispatch),
-    updateModule: (module) => updateModule(dispatch, module)
+    createModule: (course, module) => createModule(dispatch, course, module),
+    updateModule: (module) => updateModule(dispatch, module),
+    findModulesForCourse: (course) => findModulesForCourse(dispatch, course),
+    findModule: (module) => findModule(dispatch, module)
 })
 
 

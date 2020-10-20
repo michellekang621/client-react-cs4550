@@ -1,47 +1,42 @@
 import {
     DELETE_TOPIC,
     CREATE_TOPIC,
-    EDIT_TOPIC
+    UPDATE_TOPIC
 } from "../actions/topicsActions";
 
 const initialState = {
-    topics: [
-        {
-            _id: 123,
-            title: "Topic 1",
-            editing: false
-        },
-        {
-            _id: 234,
-            title: "Topic 2",
-            editing: true
-        },
-        {
-            _id: 345,
-            title: "Topic 3",
-            editing: false
-        }
-    ]
+    topics: []
 }
 
 const topicReducer = (state = initialState, action) => {
     switch (action.type) {
+        case "FIND_TOPIC_BY_ID":
+            return {
+                ...state,
+                topic: action.topic
+            }
+        case "FIND_TOPICS_FOR_LESSON":
+            return {
+                ...state,
+                topics: action.topics,
+                lessonId: action.lessonId
+            }
         case DELETE_TOPIC:
             return {
+                ...state,
                 topics: state.topics.filter(topic => topic._id ==! action.topic._id)
             }
         case CREATE_TOPIC:
             return {
+                ...state,
                 topics: [
                     ...state.topics,
-                    {
-                        _id: Date.now() + "",
-                        title: "New Topic"
-                    }
+                    action.topic
                 ]
             }
-        case EDIT_TOPIC:
+        case UPDATE_TOPIC:
             return {
+                ...state,
                 topics: state.topics.map(topic => topic._id === action.topic._id? action.topic : topic)
             }
         default:

@@ -3,20 +3,22 @@ import {connect} from "react-redux";
 import {
     createTopic,
     deleteTopic,
-    editTopic
+    updateTopic
 } from "../actions/topicsActions";
+import {Link} from "react-router-dom";
 
-const TopicPillsComponent = ({topics = [], createTopic, deleteTopic, editTopic}) =>
+const TopicPillsComponent = ({lessonId, topics = [], createTopic, deleteTopic, updateTopic}) =>
     <div>
         <span>
             {
                 topics.map (topic =>
-                    <span>
+                    <span key={topic._id}>
+                        <Link to={`/edit/${lessonId}/topics/${topic._id}`}>
                         {
                             !topic.editing &&
                                 <span>
                                     <label>{topic.title}</label>
-                                    <button onClick={() => editTopic({...topic, editing:true})}>
+                                    <button onClick={() => updateTopic({...topic, editing:true})}>
                                         Edit
                                     </button>
                                 </span>
@@ -25,33 +27,35 @@ const TopicPillsComponent = ({topics = [], createTopic, deleteTopic, editTopic})
                             topic.editing &&
                                 <span>
                                     <input onChange={(event) =>
-                                        editTopic({...topic, title: event.target.value})}
+                                        updateTopic({...topic, title: event.target.value})}
                                         value={topic.title}/>
                                     <button onClick={() => deleteTopic(topic)}>
                                         Delete
                                     </button>
-                                    <button onClick={() => editTopic({...topic, editing:false})}>
+                                    <button onClick={() => updateTopic({...topic, editing:false})}>
                                         Ok
                                     </button>
                                 </span>
                         }
+                        </Link>
                     </span>
                 )
             }
-            <button onClick={createTopic}>
+            <button onClick={() => createTopic(lessonId, {title: "New Topic"})}>
                 Create Topic
             </button>
         </span>
     </div>
 
 const stateToPropertyMapper = (state) => ({
-    topics: state.topicReducer.topics
+    topics: state.topicReducer.topics,
+    lesson: state.lessonReducer.lesson
 })
 
 const propertyToDispatchMapper = (dispatch) => ({
-    createTopic: () => createTopic(dispatch),
+    createTopic: (lessonId, topic) => createTopic(dispatch, lessonId, topic),
     deleteTopic: (topic) => deleteTopic(dispatch, topic),
-    editTopic: (topic) => editTopic(dispatch, topic)
+    updateTopic: (topic) => updateTopic(dispatch, topic)
 })
 
 export default connect

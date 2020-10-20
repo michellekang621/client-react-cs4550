@@ -20,29 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5e1b3a0-5469-41ab-9b5d-3586bd352743" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/actions/lessonsActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/moduleActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/topicsActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LessonTabsComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ModuleListComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TopicPillsComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/lessonsReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/modulesReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/topicsReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/courseReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/LessonService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/ModuleService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/TopicService.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/cs4550-f20-sever-java-michellekang.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CS3500/HW01.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CS3500/code/hw01.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CourseRowComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CourseRowComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ModuleListItemComponent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/lessonsActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/lessonsActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/moduleActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/moduleActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/topicsActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/topicsActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LessonTabsComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LessonTabsComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ModuleListComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModuleListComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TopicPillsComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopicPillsComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/CourseEditorContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/CourseEditorContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/CourseGridContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/CourseGridContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/CourseManagerContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/CourseManagerContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/LessonTabsContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/ModuleListContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/TopicPillsContainer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/CourseTableContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/CourseTableContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/lessonsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/lessonsReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/modulesReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/modulesReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/topicsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/topicsReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/course-editor/course-editor.template.client.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/course-editor/course-editor.template.client.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/course-list/course-list.template.client.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/course-list/course-list.template.client.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/css/styles.css" afterDir="false" />
@@ -112,7 +111,11 @@
       <workItem from="1602634026464" duration="2690000" />
       <workItem from="1602802956891" duration="2177000" />
       <workItem from="1602807401599" duration="4286000" />
-      <workItem from="1602895697938" duration="8761000" />
+      <workItem from="1602895697938" duration="14477000" />
+      <workItem from="1602980801475" duration="115000" />
+      <workItem from="1603043286027" duration="3304000" />
+      <workItem from="1603133970706" duration="13019000" />
+      <workItem from="1603223444771" duration="2192000" />
     </task>
     <servers />
   </component>
@@ -135,9 +138,17 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="695" y="154" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602968721209">
+    <state x="695" y="154" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602978243808">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="695" y="154" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.800@0.0.1280.800" timestamp="1602968721209" />
+    <state x="695" y="154" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.800@0.0.1280.800" timestamp="1602978243808" />
+    <state x="0" y="0" width="1034" height="600" key="dock-window-1" timestamp="1603156305963">
+      <screen x="0" y="23" width="1280" height="709" />
+    </state>
+    <state x="0" y="0" width="1034" height="600" key="dock-window-1/0.23.1280.709@0.23.1280.709" timestamp="1603156305963" />
+    <state x="561" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1603135850571">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="561" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1603135850571" />
   </component>
 </project>

@@ -8,12 +8,7 @@ import {Link} from "react-router-dom";
 export class CourseTableContainer extends React.Component {
 
     state = {
-        courses: this.props.courses,
-        course: {
-            title: "",
-            owner: "me",
-            lastUpdated: "today"
-        }
+        courses: []
     }
 
     componentDidMount() {

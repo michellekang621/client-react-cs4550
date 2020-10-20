@@ -5,14 +5,17 @@ import {
     createLesson,
     editLesson
 } from "../actions/lessonsActions";
+import {Link} from "react-router-dom";
 
-const LessonTabsComponent = ({lessons = [], deleteLesson, createLesson, editLesson}) =>
+const LessonTabsComponent = ({module, lessons = [], deleteLesson, createLesson, editLesson}) =>
     <div>
         <h1>Lessons</h1>
         <span>
             {
                 lessons.map(lesson=>
-                    <span>
+                    <span key={lesson._id}>
+                    <Link to={`/edit/${module._id}/lessons/${lesson._id}`}>
+
                     {
                         !lesson.editing &&
                         <span>
@@ -41,22 +44,24 @@ const LessonTabsComponent = ({lessons = [], deleteLesson, createLesson, editLess
                                 </button>
                             </span>
                     }
+                    </Link>
                     </span>
                 )
             }
-            <button onClick={createLesson}>
+            <button onClick={() => createLesson(module._id, {title: "New Lesson"})}>
                 Create Lesson
             </button>
         </span>
     </div>
 
 const stateToPropertyMapper = (state) => ({
-    lessons: state.lessonReducer.lessons
+    lessons: state.lessonReducer.lessons,
+    module: state.moduleReducer.module
 })
 
 const propertyToDispatchMapper = (dispatch) => ({
     deleteLesson: (lesson) => deleteLesson(dispatch, lesson),
-    createLesson: () => createLesson(dispatch),
+    createLesson: (module, lesson) => createLesson(dispatch, module, lesson),
     editLesson: (lesson) => editLesson(dispatch, lesson)
 })
 
