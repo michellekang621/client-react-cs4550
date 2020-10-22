@@ -19,8 +19,10 @@ export class CourseManagerContainer extends React.Component {
                     <Route path="/course/grid"
                            render={() => <CourseGridContainer/>}/>
                     <Route path={["/edit/:courseId",
-                        "/edit/:courseId/modules/:modId",
-                        "/edit/:modId/lessons/:lessonId",
+                        "/edit/:courseId/modules/:moduleId",
+                        "/edit/:moduleId",
+                        "/edit/:moduleId/lessons/:lessonId",
+                        "/edit/:lessonId",
                         "/edit/:lessonId/topics/:topicId"]}
                            exact component={CourseEditorContainer}/>}/>
                     <Link to="/course/table" className="bottom-right">Table</Link>

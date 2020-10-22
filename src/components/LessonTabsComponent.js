@@ -10,17 +10,18 @@ import {Link} from "react-router-dom";
 const LessonTabsComponent = ({module, lessons = [], deleteLesson, createLesson, editLesson}) =>
     <div>
         <h1>Lessons</h1>
-        <span>
+        <ul>
             {
                 lessons.map(lesson=>
-                    <span key={lesson._id}>
-                    <Link to={`/edit/${module._id}/lessons/${lesson._id}`}>
+                    <li key={lesson._id}>
 
                     {
                         !lesson.editing &&
                         <span>
                             <label>
+                            <Link to={`/edit/${module._id}/lessons/${lesson._id}`}>
                                 {lesson.title}
+                            </Link>
                             </label>
                             <button onClick={() =>
                                 editLesson({...lesson, editing: true})}>
@@ -44,14 +45,13 @@ const LessonTabsComponent = ({module, lessons = [], deleteLesson, createLesson, 
                                 </button>
                             </span>
                     }
-                    </Link>
-                    </span>
+                    </li>
                 )
             }
-            <button onClick={() => createLesson(module._id, {title: "New Lesson"})}>
+            <button onClick={() => createLesson(module, {title: "New Lesson"})}>
                 Create Lesson
             </button>
-        </span>
+        </ul>
     </div>
 
 const stateToPropertyMapper = (state) => ({

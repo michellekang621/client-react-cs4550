@@ -10,9 +10,10 @@ import {connect} from "react-redux";
 export class CourseEditorContainer extends React.Component{
 
     componentDidMount() {
+        console.log(this.props)
         const courseId = this.props.match.params.courseId
-        const moduleId = this.props.match.params.modId
-        console.log(moduleId)
+        console.log(courseId)
+        const moduleId = this.props.match.params.moduleId
         this.props.findCourseById(courseId)
         this.props.findModulesForCourse(courseId)
         if(moduleId) {
@@ -21,8 +22,9 @@ export class CourseEditorContainer extends React.Component{
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        const moduleId = this.props.match.params.modId
-        const previousModuleId = prevProps.match.params.modId
+        console.log(this.props)
+        const moduleId = this.props.match.params.moduleId
+        const previousModuleId = prevProps.match.params.moduleId
         if(moduleId !== previousModuleId) {
             this.props.findLessonsForModule(moduleId)
         }

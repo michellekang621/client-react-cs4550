@@ -18,7 +18,6 @@ const ModuleListComponent = ({course, modules = [], deleteModule, createModule, 
                 modules.map(module =>
                     <li key={module._id} class="list-group-item">
 
-                    <Link to={`/edit/${course._id}/modules/${module._id}`}>
                             {
                                 module.editing &&
                                 <span>
@@ -36,11 +35,12 @@ const ModuleListComponent = ({course, modules = [], deleteModule, createModule, 
                                 <label>
                                     <i onClick={() => updateModule({...module, editing: true})}
                                             className="fa fa-edit float-right pad-element element-color"/>
+                                    <Link to={`/edit/${course._id}/modules/${module._id}`}>
                                     {module.title}
+                                    </Link>
                                 </label>
 
                             }
-                    </Link>
                     </li>
                 )
             }

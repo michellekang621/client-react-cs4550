@@ -3,12 +3,13 @@ export const DELETE_MODULE = "DELETE_MODULE"
 export const CREATE_MODULE = "CREATE_MODULE"
 export const UPDATE_MODULE = "UPDATE_MODULE"
 
-export const createModule = (dispatch, course, module) =>
+export const createModule = (dispatch, course, module) => {
+    console.log(course._id)
     moduleService.createModuleForCourse(course._id, module)
         .then(actualModule => dispatch({
             type: CREATE_MODULE,
             module: actualModule
-        }))
+        }))}
 
 export const findModulesForCourse = (dispatch, course) =>
     moduleService.findModulesForCourse(course._id)
