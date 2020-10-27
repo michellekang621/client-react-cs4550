@@ -20,18 +20,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5e1b3a0-5469-41ab-9b5d-3586bd352743" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/HeadingWidgetComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ParagraphWidgetComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WidgetListComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/widgetReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/WidgetService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/classes/production/cs4550-f20-sever-java-michellekang/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/classes/production/cs4550-f20-sever-java-michellekang/com/example/cs4550f20serverjavamichellekang/DemoApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/classes/production/cs4550-f20-sever-java-michellekang/com/example/cs4550f20serverjavamichellekang/controllers/HelloRestController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/classes/production/cs4550-f20-sever-java-michellekang/com/example/cs4550f20serverjavamichellekang/controllers/WidgetController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/classes/production/cs4550-f20-sever-java-michellekang/com/example/cs4550f20serverjavamichellekang/models/Message.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/classes/production/cs4550-f20-sever-java-michellekang/com/example/cs4550f20serverjavamichellekang/models/Widget.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/classes/production/cs4550-f20-sever-java-michellekang/com/example/cs4550f20serverjavamichellekang/services/WidgetService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/classes/test/cs4550-f20-sever-java-michellekang/com/example/cs4550f20serverjavamichellekang/DemoApplicationTests.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/cs4550-f20-sever-java-michellekang.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CS3500/HW01.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CS3500/code/hw01.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/lessonsActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/lessonsActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/moduleActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/moduleActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LessonTabsComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LessonTabsComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ModuleListComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModuleListComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TopicPillsComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopicPillsComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/CourseEditorContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/CourseEditorContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/CourseManagerContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/CourseManagerContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/course-editor/course-editor.template.client.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/course-editor/course-editor.template.client.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/course-list/course-list.template.client.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/course-list/course-list.template.client.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/css/styles.css" afterDir="false" />
@@ -82,6 +93,9 @@
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d5e1b3a0-5469-41ab-9b5d-3586bd352743" name="Default Changelist" comment="" />
@@ -108,6 +122,12 @@
       <workItem from="1603223444771" duration="2192000" />
       <workItem from="1603226178749" duration="913000" />
       <workItem from="1603227176825" duration="5661000" />
+      <workItem from="1603332932929" duration="223000" />
+      <workItem from="1603660056275" duration="996000" />
+      <workItem from="1603737165153" duration="2000" />
+      <workItem from="1603747545141" duration="10221000" />
+      <workItem from="1603826089296" duration="263000" />
+      <workItem from="1603827769720" duration="2832000" />
     </task>
     <servers />
   </component>
@@ -120,6 +140,20 @@
         <entry key="MAIN">
           <value>
             <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
           </value>
         </entry>
       </map>

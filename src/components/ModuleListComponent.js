@@ -39,7 +39,6 @@ const ModuleListComponent = ({course, modules = [], deleteModule, createModule, 
                                     {module.title}
                                     </Link>
                                 </label>
-
                             }
                     </li>
                 )

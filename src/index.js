@@ -12,12 +12,14 @@ import moduleReducer from "./reducers/modulesReducer";
 import lessonReducer from "./reducers/lessonsReducer";
 import topicReducer from "./reducers/topicsReducer";
 import courseReducer from "./reducers/courseReducer";
+import widgetReducer from "./reducers/widgetReducer";
 
 const rootReducer = combineReducers({
     courseReducer: courseReducer,
     moduleReducer: moduleReducer,
     lessonReducer: lessonReducer,
-    topicReducer: topicReducer
+    topicReducer: topicReducer,
+    widgetReducer: widgetReducer
 })
 
 const store = createStore(rootReducer)
