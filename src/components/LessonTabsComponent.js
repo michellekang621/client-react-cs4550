@@ -7,8 +7,10 @@ import {
 } from "../actions/lessonsActions";
 import {Link} from "react-router-dom";
 
-const LessonTabsComponent = ({module, lessons = [], deleteLesson, createLesson, editLesson}) =>
+const LessonTabsComponent = ({course, moduleId, lessons = [], deleteLesson, createLesson, editLesson}) =>
     <div>
+        {console.log("INSIDE LESSON COMPONENT COURSE " + course._id)}
+        {console.log("INSIDE LESSON COMPONENT " + moduleId)}
         <h1>Lessons</h1>
         <ul>
             {
@@ -19,7 +21,7 @@ const LessonTabsComponent = ({module, lessons = [], deleteLesson, createLesson, 
                         !lesson.editing &&
                         <span>
                             <label>
-                            <Link to={`/edit/${module._id}/lessons/${lesson._id}`}>
+                            <Link to={`/edit/${course._id}/modules/${moduleId}/lessons/${lesson._id}`}>
                                 {lesson.title}
                             </Link>
                             </label>
@@ -36,7 +38,7 @@ const LessonTabsComponent = ({module, lessons = [], deleteLesson, createLesson, 
                                     editLesson({...lesson, title: event.target.value})}
                                 value={lesson.title}/>
                                 <button onClick={() =>
-                                    editLesson({... lesson, editing: false})}>
+                                    editLesson({...lesson, editing: false})}>
                                     Ok
                                 </button>
                                 <button onClick={() =>
@@ -48,7 +50,7 @@ const LessonTabsComponent = ({module, lessons = [], deleteLesson, createLesson, 
                     </li>
                 )
             }
-            <button onClick={() => createLesson(module, {title: "New Lesson"})}>
+            <button onClick={() => createLesson(moduleId, {title: "New Lesson"})}>
                 Create Lesson
             </button>
         </ul>
@@ -56,12 +58,13 @@ const LessonTabsComponent = ({module, lessons = [], deleteLesson, createLesson, 
 
 const stateToPropertyMapper = (state) => ({
     lessons: state.lessonReducer.lessons,
-    module: state.moduleReducer.module
+    moduleId: state.lessonReducer.moduleId,
+    course: state.courseReducer.course
 })
 
 const propertyToDispatchMapper = (dispatch) => ({
     deleteLesson: (lesson) => deleteLesson(dispatch, lesson),
-    createLesson: (module, lesson) => createLesson(dispatch, module, lesson),
+    createLesson: (moduleId, lesson) => createLesson(dispatch, moduleId, lesson),
     editLesson: (lesson) => editLesson(dispatch, lesson)
 })
 

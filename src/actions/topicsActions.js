@@ -1,5 +1,4 @@
 import TopicService from "../services/TopicService"
-import LessonService from "../services/LessonService";
 
 export const DELETE_TOPIC = "DELETE_TOPIC"
 export const CREATE_TOPIC = "CREATE_TOPIC"

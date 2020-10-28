@@ -12,6 +12,7 @@ import {
 
 const ModuleListComponent = ({course, modules = [], deleteModule, createModule, updateModule}) =>
     <div>
+        {console.log("INSIDE MODULE COMPONENT " + course._id)}
         <h1>Modules</h1>
         <ul class="list-group">
             {
@@ -58,8 +59,8 @@ const propertyToDispatchMapper = (dispatch) => ({
     deleteModule: (module) => deleteModule(dispatch, module),
     createModule: (course, module) => createModule(dispatch, course, module),
     updateModule: (module) => updateModule(dispatch, module),
-    findModulesForCourse: (course) => findModulesForCourse(dispatch, course),
-    findModule: (module) => findModule(dispatch, module)
+    // findModulesForCourse: (course) => findModulesForCourse(dispatch, course),
+    // findModule: (module) => findModule(dispatch, module)
 })
 
 

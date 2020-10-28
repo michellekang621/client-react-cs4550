@@ -6,7 +6,8 @@ import {
 
 const initialState = {
     lessons: [],
-    lesson: {}
+    lesson: {},
+    moduleId: ""
 }
 
 const lessonReducer = (state = initialState, action) => {
@@ -28,7 +29,8 @@ const lessonReducer = (state = initialState, action) => {
                 lessons: [
                     ...state.lessons,
                     action.lesson
-                ]
+                ],
+                moduleId: action.moduleId
             }
         case DELETE_LESSON:
             return {

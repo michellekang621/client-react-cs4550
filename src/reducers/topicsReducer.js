@@ -5,7 +5,9 @@ import {
 } from "../actions/topicsActions";
 
 const initialState = {
-    topics: []
+    topics: [],
+    topic: {},
+    lessonId: ""
 }
 
 const topicReducer = (state = initialState, action) => {
@@ -24,7 +26,7 @@ const topicReducer = (state = initialState, action) => {
         case DELETE_TOPIC:
             return {
                 ...state,
-                topics: state.topics.filter(topic => topic._id ==! action.topic._id)
+                topics: state.topics.filter(topic => topic._id !== action.topic._id)
             }
         case CREATE_TOPIC:
             return {
@@ -32,7 +34,8 @@ const topicReducer = (state = initialState, action) => {
                 topics: [
                     ...state.topics,
                     action.topic
-                ]
+                ],
+                lessonId: action.lessonId
             }
         case UPDATE_TOPIC:
             return {

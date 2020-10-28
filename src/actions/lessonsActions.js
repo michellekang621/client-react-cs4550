@@ -3,9 +3,10 @@ export const DELETE_LESSON = "DELETE_LESSON"
 export const CREATE_LESSON = "CREATE_LESSON"
 export const EDIT_LESSON = "EDIT_LESSON"
 
-export const createLesson = (dispatch, module, lesson) => {
-    console.log(module._id)
-    LessonService.createLessonForModule(module._id, lesson)
+export const createLesson = (dispatch, moduleId, lesson) => {
+    console.log("ACTION MODULE STATUS")
+    console.log(moduleId)
+    LessonService.createLessonForModule(moduleId, lesson)
         .then(actualLesson => dispatch({
             type: CREATE_LESSON,
             lesson: actualLesson
