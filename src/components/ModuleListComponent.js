@@ -45,9 +45,7 @@ const ModuleListComponent = ({course, modules = [], deleteModule, createModule, 
                 )
             }
         </ul>
-        <button onClick={() => createModule(course, {title: "New Module"})}>
-            Create Module
-        </button>
+        <i onClick={() => createModule(course, {title: "New Module"})} className="fa fa-plus-square"/>
     </div>
 
 const stateToPropertyMapper = (state) => ({

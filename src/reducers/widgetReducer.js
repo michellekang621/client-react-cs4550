@@ -17,6 +17,7 @@ const widgetReducer = (state ={}, action) => {
             }
         case "DELETE_WIDGET":
             return {
+                ...state,
                 widgets: state.widgets.filter(widget => widget.id !== action.widget.id)
             }
         case "UPDATE_WIDGET":
@@ -31,6 +32,16 @@ const widgetReducer = (state ={}, action) => {
             return {
                 ...state,
                 widget: action.widget
+            }
+        case "MOVE_WIDGET_UP":
+            return {
+                ...state,
+                widgets: action.widgets
+            }
+        case "MOVE_WIDGET_DOWN":
+            return {
+                ...state,
+                widgets: action.widgets
             }
         default:
             return state

@@ -32,16 +32,15 @@
       <change beforePath="$PROJECT_DIR$/../../../CS3500/HW01.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CS3500/code/hw01.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/lessonsActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/lessonsActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/topicsActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/topicsActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HeadingWidgetComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HeadingWidgetComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/LessonTabsComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LessonTabsComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ModuleListComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModuleListComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ParagraphWidgetComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ParagraphWidgetComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/TopicPillsComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopicPillsComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WidgetListComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WidgetListComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/CourseEditorContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/CourseEditorContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/CourseManagerContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/CourseManagerContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/lessonsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/lessonsReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/modulesReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/modulesReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/topicsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/topicsReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/widgetReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/widgetReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/WidgetService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/WidgetService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/course-editor/course-editor.template.client.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/course-editor/course-editor.template.client.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/course-list/course-list.template.client.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/course-list/course-list.template.client.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/css/styles.css" afterDir="false" />
@@ -126,7 +125,11 @@
       <workItem from="1603737165153" duration="2000" />
       <workItem from="1603747545141" duration="10221000" />
       <workItem from="1603826089296" duration="263000" />
-      <workItem from="1603827769720" duration="9882000" />
+      <workItem from="1603827769720" duration="13551000" />
+      <workItem from="1603910206975" duration="1984000" />
+      <workItem from="1604264949667" duration="9000" />
+      <workItem from="1604337042800" duration="12836000" />
+      <workItem from="1604440869146" duration="1304000" />
     </task>
     <servers />
   </component>
@@ -171,9 +174,13 @@
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="0" y="0" width="1034" height="600" key="dock-window-1/0.23.1280.709@0.23.1280.709" timestamp="1603156305963" />
-    <state x="561" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1603135850571">
+    <state x="0" y="23" width="598" height="709" key="find.popup" timestamp="1604352043818">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="561" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1603135850571" />
+    <state x="0" y="23" width="598" height="709" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1604352043818" />
+    <state x="561" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1604348168978">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="561" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1604348168978" />
   </component>
 </project>

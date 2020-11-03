@@ -50,7 +50,6 @@ export class CourseEditorContainer extends React.Component{
         console.log("updated topicID: " + topicId)
 
         if(moduleId !== previousModuleId) {
-            console.log("finding lessons for module meaning module id has changed")
             this.props.findLessonsForModule(moduleId)
         }
 

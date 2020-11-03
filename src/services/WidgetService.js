@@ -1,34 +1,38 @@
 const topicsUrl = "http://localhost:8080/api/topics"
 const widgetsUrl = "http://localhost:8080/api/widgets"
 
-export const createWidgetForTopic = (topicId, widget) =>
-    fetch(`${topicsUrl}/${topicId}/widgets`,{
-            method: "POST",
-            // TODO: why do we have to add topicID?
-            body: JSON.stringify({
-                ...widget,
-                topicId
-            }),
-            headers: {
-                "content-type": "application/json"
-            }
-        })
+export const createWidgetForTopic = (topicId, widget) => {
+    console.log("CREATE WIDGET FOR TOPIC SERVICES")
+    return fetch(`${topicsUrl}/${topicId}/widgets`, {
+        method: "POST",
+        body: JSON.stringify({
+            ...widget,
+            topicId
+        }),
+        headers: {
+            "content-type": "application/json"
+        }
+    })
         .then(response => response.json())
+}
 
-export const findWidgetsForTopic = (topicId) =>
-    fetch(`${topicsUrl}/${topicId}/widgets`)
+export const findWidgetsForTopic = (topicId) => {
+    return fetch(`${topicsUrl}/${topicId}/widgets`)
         .then(response => response.json())
+}
 
-export const findAllWidgets = () =>
-    fetch(widgetsUrl)
+export const findAllWidgets = () => {
+    return fetch(widgetsUrl)
         .then(response => response.json())
+}
 
-export const findWidgetById = (widgetId) =>
-    fetch(`${widgetsUrl}/${widgetId}`)
+export const findWidgetById = (widgetId) => {
+    return fetch(`${widgetsUrl}/${widgetId}`)
         .then(response => response.json())
+}
 
-export const updateWidget = (widgetId, widget) =>
-    fetch(`${widgetsUrl}/${widgetId}`, {
+export const updateWidget = (widgetId, widget) => {
+    return fetch(`${widgetsUrl}/${widgetId}`, {
         method: "PUT",
         body: JSON.stringify(widget),
         headers: {
@@ -36,13 +40,45 @@ export const updateWidget = (widgetId, widget) =>
         }
     })
         .then(response => response.json())
+}
 
-export const deleteWidget = (widgetId) =>
-    fetch(`${widgetsUrl}/${widgetId}`, {
+export const deleteWidget = (widgetId) => {
+    console.log("DELETING WIDGET SERVICES")
+    console.log(widgetId)
+
+    return fetch(`${widgetsUrl}/${widgetId}`, {
         method: "DELETE"
     })
         .then(response => response.json())
+}
 
+export const moveWidgetUp = (widget, topicId) => {
+    return fetch(`${topicsUrl}/${topicId}/widgets`, {
+        method: "PUT",
+        body: JSON.stringify({
+            ...widget,
+            topicId
+        }),
+        headers: {
+            "content-type": "application/json"
+        }
+    })
+        .then(response => response.json())
+}
+
+export const moveWidgetDown = (widget, topicId) => {
+    return fetch(`${topicsUrl}/${topicId}/widgets`, {
+        method: "PUT",
+        body: JSON.stringify({
+            ...widget,
+            topicId
+        }),
+        headers: {
+            "content-type": "application/json"
+        }
+    })
+        .then(response => response.json())
+}
 
 export default {
     createWidgetForTopic,
@@ -50,5 +86,7 @@ export default {
     findAllWidgets,
     findWidgetById,
     updateWidget,
-    deleteWidget
+    deleteWidget,
+    moveWidgetUp,
+    moveWidgetDown
 }
