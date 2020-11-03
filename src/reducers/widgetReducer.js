@@ -36,12 +36,16 @@ const widgetReducer = (state ={}, action) => {
         case "MOVE_WIDGET_UP":
             return {
                 ...state,
-                widgets: action.widgets
+                widget: action.widget,
+                widgets: action.widgets,
+                topic: action.topicId
             }
         case "MOVE_WIDGET_DOWN":
             return {
                 ...state,
-                widgets: action.widgets
+                widget: action.widget,
+                widgets: action.widgets,
+                topic: action.topicId
             }
         default:
             return state

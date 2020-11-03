@@ -34,16 +34,6 @@ const WidgetListComponent = (
                                onClick={() => moveWidgetUp({...widget, movement: "up"})}/>
                             <i className={"fa fa-arrow-down float-right col-md-auto"}
                                onClick={() => moveWidgetDown({...widget, movement: "down"})}/>
-                            {
-                                widget.editing &&
-                                <i onClick={() => updateWidget({...widget, editing: false})}
-                                   className="fa fa-check-square float-right element-color"/>
-                            }
-                            {
-                                !widget.editing &&
-                                <i onClick={() => updateWidget({...widget, editing: true})}
-                                   className="fa fa-edit float-right element-color"/>
-                            }
 
                             <select className={"float-right col-md-auto"}
                                     onChange={(event) =>
