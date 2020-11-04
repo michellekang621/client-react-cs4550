@@ -31,6 +31,7 @@
       <change afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/cs4550-f20-sever-java-michellekang.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CS3500/HW01.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CS3500/code/hw01.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/course-editor/course-editor.template.client.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/course-editor/course-editor.template.client.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/course-list/course-list.template.client.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/course-list/course-list.template.client.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/css/styles.css" afterDir="false" />
@@ -119,7 +120,7 @@
       <workItem from="1603910206975" duration="1984000" />
       <workItem from="1604264949667" duration="9000" />
       <workItem from="1604337042800" duration="12836000" />
-      <workItem from="1604440869146" duration="4955000" />
+      <workItem from="1604440869146" duration="5610000" />
     </task>
     <servers />
   </component>
