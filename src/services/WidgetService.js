@@ -32,6 +32,7 @@ export const findWidgetById = (widgetId) => {
 }
 
 export const updateWidget = (widgetId, widget) => {
+    console.log("CHANGED")
     return fetch(`${widgetsUrl}/${widgetId}`, {
         method: "PUT",
         body: JSON.stringify(widget),

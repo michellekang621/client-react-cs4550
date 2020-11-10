@@ -7,6 +7,12 @@ export class ImageWidgetComponent extends React.Component {
         updateWidget: this.props.updateWidget
     }
 
+    updateWidgetSrc = (event) => {
+        const newSrc = event.target.value
+        const widget = {...this.props.widget}
+        this.props.updateWidget({...widget, src: newSrc})
+    }
+
     updateWidgetName = (event) => {
         const newTitle = event.target.value
         const widget = {...this.props.widget}
@@ -17,12 +23,13 @@ export class ImageWidgetComponent extends React.Component {
         return (
             <div>
                 <h3>Image Widget</h3>
-                <input value={"Image URL"}/>
+                <input value={this.props.widget.src} className={"form-control pad-top"}
+                       onChange={this.updateWidgetSrc}/>
                 <input value={this.props.widget.name} className={"form-control pad-top"}
                        onChange={this.updateWidgetName}/>
                 <div>
                     <h4>Preview</h4>
-                    <image></image>
+                    <img src={this.props.widget.src}/>
                 </div>
             </div>
         )
