@@ -16,8 +16,6 @@ export class HeadingWidgetComponent extends React.Component {
 
     render() {
         return (
-
-
             <div>
                 {
                     this.state.editing &&

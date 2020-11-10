@@ -20,18 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5e1b3a0-5469-41ab-9b5d-3586bd352743" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/classes/production/cs4550-f20-sever-java-michellekang/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/classes/production/cs4550-f20-sever-java-michellekang/com/example/cs4550f20serverjavamichellekang/DemoApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/classes/production/cs4550-f20-sever-java-michellekang/com/example/cs4550f20serverjavamichellekang/controllers/HelloRestController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/classes/production/cs4550-f20-sever-java-michellekang/com/example/cs4550f20serverjavamichellekang/controllers/WidgetController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/classes/production/cs4550-f20-sever-java-michellekang/com/example/cs4550f20serverjavamichellekang/models/Message.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/classes/production/cs4550-f20-sever-java-michellekang/com/example/cs4550f20serverjavamichellekang/models/Widget.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/classes/production/cs4550-f20-sever-java-michellekang/com/example/cs4550f20serverjavamichellekang/services/WidgetService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/classes/test/cs4550-f20-sever-java-michellekang/com/example/cs4550f20serverjavamichellekang/DemoApplicationTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS3700/Project4/transport-starter-code/python/.idea/python.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ImageWidgetComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ListWidgetComponent.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/cs4550-f20-sever-java-michellekang.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/target/classes/com/example/cs4550f20serverjavamichellekang/controllers/WidgetController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/target/classes/com/example/cs4550f20serverjavamichellekang/services/WidgetService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CS3500/HW01.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CS3500/code/hw01.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HeadingWidgetComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HeadingWidgetComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WidgetListComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WidgetListComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/course-editor/course-editor.template.client.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/course-editor/course-editor.template.client.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/course-list/course-list.template.client.html" beforeDir="false" afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/course-list/course-list.template.client.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../cs4550-f20-server-java-michellekang/src/main/webapp/css/styles.css" afterDir="false" />
@@ -120,7 +120,10 @@
       <workItem from="1603910206975" duration="1984000" />
       <workItem from="1604264949667" duration="9000" />
       <workItem from="1604337042800" duration="12836000" />
-      <workItem from="1604440869146" duration="5610000" />
+      <workItem from="1604440869146" duration="6013000" />
+      <workItem from="1604449978854" duration="163000" />
+      <workItem from="1604795229254" duration="90000" />
+      <workItem from="1604971035207" duration="3200000" />
     </task>
     <servers />
   </component>

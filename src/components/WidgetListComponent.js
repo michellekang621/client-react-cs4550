@@ -3,6 +3,8 @@ import {connect} from "react-redux";
 import widgetService from "../services/WidgetService"
 import HeadingWidgetComponent from "./HeadingWidgetComponent";
 import ParagraphWidgetComponent from "./ParagraphWidgetComponent";
+import ListWidgetComponent from "./ListWidgetComponent";
+import ImageWidgetComponent from "./ImageWidgetComponent";
 
 const WidgetListComponent = (
     {
@@ -24,9 +26,11 @@ const WidgetListComponent = (
                         <div className={"col form-group"}>
                             <select className={"float-right col-md-auto"}
                                     onChange={(event) =>
-                                        updateWidget({...widget, type: event.target.value})}>>
+                                        updateWidget({...widget, type: event.target.value})}>
                                 <option value={"HEADING"}>Heading</option>
                                 <option value={"PARAGRAPH"}>Paragraph</option>
+                                <option value={"LIST"}>List</option>
+                                <option value={"IMAGE"}>Image</option>
                             </select>
                             <i onClick={() => deleteWidget(widget)}
                                className={"fa fa-trash float-right col-md-auto element-color"}/>
@@ -81,6 +85,16 @@ const WidgetListComponent = (
                                 <ParagraphWidgetComponent widget={widget} editing={widget.editing}
                                                           updateWidget={updateWidget}/>
                             }
+                            {
+                                widget.type === "LIST" &&
+                                    <ListWidgetComponent widget={widget} editing={widget.editing}
+                                                         update={updateWidget}/>
+                            }
+                            {
+                                widget.type === "IMAGE" &&
+                                    <ImageWidgetComponent widget={widget} editing={widget.editing}
+                                                          updateWidget={updateWidget}/>
+                            }
                         </div>
                     </div>
                 )
@@ -99,7 +113,7 @@ const dispatchMapper = (dispatch) => ({
     createWidgetForTopic: (topicId) =>
         widgetService.createWidgetForTopic(topicId, {
             name: "NEW WIDGET",
-            type: "PARAGRAPH"
+            type: "HEADING"
         }).then(widget => dispatch({
             type: "CREATE_WIDGET_FOR_TOPIC",
             widget
