@@ -43,14 +43,15 @@ export const updateWidget = (widgetId, widget) => {
         .then(response => response.json())
 }
 
-export const deleteWidget = (widgetId) => {
+export const deleteWidget = (widgetId, topicId) => {
     console.log("DELETING WIDGET SERVICES")
     console.log(widgetId)
 
-    return fetch(`${widgetsUrl}/${widgetId}`, {
+    fetch(`${widgetsUrl}/${widgetId}`, {
         method: "DELETE"
     })
-        .then(response => response.json())
+
+    return findWidgetsForTopic(topicId)
 }
 
 export const moveWidgetUp = (widget, topicId) => {

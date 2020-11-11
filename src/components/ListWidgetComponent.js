@@ -28,14 +28,18 @@ export class ListWidgetComponent extends React.Component {
                 <textarea value={this.props.widget.text} className={"form-control"}
                           onChange={this.updateWidgetText}/>
             </div>
+                <div className={"pad-top"}>
                 <select className={"float-right col-md-auto"}
                         onChange={(event) =>
                             this.setState({listType: event.target.value})}>
                     <option value={"UL"}>Unordered list</option>
                     <option value={"OL"}>Ordered list</option>
                 </select>
+                </div>
+                <div className={"pad-top"}>
                 <input value={this.props.widget.name} className={"form-control pad-top"}
                        onChange={this.updateWidgetName}/>
+                </div>
                 <div>
                     <h4>Preview</h4>
                     {

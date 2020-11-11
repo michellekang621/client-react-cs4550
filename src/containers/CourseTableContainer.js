@@ -31,6 +31,7 @@ export class CourseTableContainer extends React.Component {
     }
 
     createCourse = () => {
+        console.log("creating course")
         createCourse(this.state.course)
             .then(actualCourse => this.setState(function (prevState) {
                 return {

@@ -32,7 +32,7 @@ const WidgetListComponent = (
                                 <option value={"LIST"}>List</option>
                                 <option value={"IMAGE"}>Image</option>
                             </select>
-                            <i onClick={() => deleteWidget(widget)}
+                            <i onClick={() => deleteWidget(widget, topicId)}
                                className={"fa fa-trash float-right col-md-auto element-color"}/>
                             <i className={"fa fa-arrow-up float-right col-md-auto"}
                                onClick={() => moveWidgetUp({...widget, movement: "up"})}/>
@@ -88,7 +88,7 @@ const WidgetListComponent = (
                             {
                                 widget.type === "LIST" &&
                                     <ListWidgetComponent widget={widget} editing={widget.editing}
-                                                         update={updateWidget}/>
+                                                         updateWidget={updateWidget}/>
                             }
                             {
                                 widget.type === "IMAGE" &&
@@ -113,16 +113,18 @@ const dispatchMapper = (dispatch) => ({
     createWidgetForTopic: (topicId) =>
         widgetService.createWidgetForTopic(topicId, {
             name: "NEW WIDGET",
-            type: "HEADING"
+            type: "HEADING",
+            size: 1
         }).then(widget => dispatch({
             type: "CREATE_WIDGET_FOR_TOPIC",
             widget
         })),
-    deleteWidget: (widget) =>
-        widgetService.deleteWidget(widget.id)
-            .then(deletedWidget => dispatch({
+    deleteWidget: (widget, topicId) =>
+        widgetService.deleteWidget(widget.id, topicId)
+            .then(updatedList => dispatch({
                 type: "DELETE_WIDGET",
-                widget: deletedWidget
+                widgets: updatedList,
+                topicId: topicId
             })),
     updateWidget: (widget) =>
         widgetService.updateWidget(widget.id, widget)
